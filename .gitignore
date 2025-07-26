@@ -1,0 +1,13 @@
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Base de datos local
+*.db
+
+# Archivos de entorno o secretos (por si los usas después)
+.env
+
+# Carpetas del sistema operativo (por si copias desde otras carpetas)
+.DS_Store
+Thumbs.db
