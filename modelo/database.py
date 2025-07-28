@@ -28,9 +28,6 @@ class DatabaseManager:
         # Crear el esquema de tablas
         self.crear_tablas()
 
-
-
-    
     def crear_tablas(self) -> None:
         """
         Crea las tablas necesarias si no existen.
@@ -104,8 +101,6 @@ class DatabaseManager:
         self.connection.commit()
         return self.cursor.lastrowid 
 
-
-
     def obtener_cuentas(self) -> list:
         """
         Recupera todas las filas de la tabla 'cuentas'.
@@ -118,7 +113,6 @@ class DatabaseManager:
         self.cursor.execute("SELECT * FROM cuentas")
         return self.cursor.fetchall()
     
-
 
 
     def insertar_movimiento(self, fecha: str, tipo: str, categoria: str, descripcion: str, monto: float, cuenta_id: int, proyecto_id: int = None) -> int:
@@ -152,8 +146,6 @@ class DatabaseManager:
         self.connection.commit()
         return self.cursor.lastrowid
     
-
-
     def obtener_movimientos(self) -> list:
         """
         Recupera todas las filas de la tabla 'movimientos'.
@@ -192,8 +184,6 @@ class DatabaseManager:
                             (nombre, meta, fecha_meta, descripcion))
         self.connection.commit()
         return self.cursor.lastrowid
-    
-
     
     def obtener_proyectos(self) -> list:
         """
